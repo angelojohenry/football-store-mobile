@@ -62,3 +62,38 @@ Hot Restart:
 Contoh:
 Ubah teks atau warna tombol → gunakan hot reload.
 Ubah variabel global atau menambahkan dependensi baru → gunakan hot restart
+
+TUGAS 8
+1.
+- Navigator.push()
+Menambahkan (push) halaman baru ke stack navigasi tanpa menghapus halaman sebelumnya.
+Artinya, pengguna bisa kembali ke halaman sebelumnya menggunakan tombol Back.
+
+Contoh kasus di Football Shop:
+Saat pengguna membuka halaman create product, pengguna bisa kembali lagi ke home page
+
+- Navigator.pushReplacement()
+Mengganti (replace) halaman saat ini dengan halaman baru di stack navigasi.
+Halaman lama akan dihapus dari memori, sehingga pengguna tidak bisa kembali ke sana dengan tombol Back.
+
+Contoh kasus di Football Shop:
+Setelah pengguna berhasil login, langsung ditampilkan halaman HomePage, dan tidak ingin mereka kembali ke halaman login
+
+2. Cara penggunaan:
+Scaffold → Kerangka utama setiap halaman (memuat AppBar, Drawer, dan body).
+AppBar → Menampilkan judul halaman.
+Drawer → Menu navigasi ke halaman lain seperti "Home" dan "Create Product
+
+2.
+- Padding
+  Kelebihan: Menambah ruang di sekitar elemen agar tidak terlalu menempel ke tepi layar.
+  Contoh penggunaan: Memberi jarak antar field input di product_form.dart
+- SingleChildScrollView
+  Kelebihan: Membuat seluruh konten bisa discroll jika terlalu panjang untuk layar.
+  Contoh penggunaan: Pada halaman form dengan banyak input
+- ListView
+  Kelebihan: Menampilkan daftar elemen dinamis secara efisien.
+  Contoh penggunaan: Menampilkan nama toko, teks, serta tombol-tombol untuk mengakses halaman lainnya pada left_drawer.dart
+
+4. Menyesuaikan warna utama (primary color), aksen, dan latar belakang melalui ThemeData di MaterialApp.
+
