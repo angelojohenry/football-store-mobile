@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:football_store/screens/menu.dart';
 import 'package:football_store/screens/productlist_form.dart';
+import 'package:football_store/screens/product_entry_list.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -12,7 +13,7 @@ class LeftDrawer extends StatelessWidget {
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Colors.black,
             ),
             child: Column(
               children: [
@@ -55,6 +56,17 @@ class LeftDrawer extends StatelessWidget {
             // Bagian redirection ke NewsFormPage
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => ProductFormPage()));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.add_reaction_rounded),
+            title: const Text('Products List'),
+            onTap: () {
+              // Route to news list page
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProductEntryListPage()),
+              );
             },
           ),
         ],
